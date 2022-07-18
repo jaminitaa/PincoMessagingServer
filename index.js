@@ -1,10 +1,16 @@
 const express = require('express');
+const fs = require('fs');
 
 const { initializeApp: initializeAdminApp, applicationDefault } = require('firebase-admin/app');
 const { getMessaging } = require('firebase-admin/messaging');
 
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, query, where, onSnapshot } = require("firebase/firestore");
+
+firebaseAdminKeyContents = process.env.firebase-admin-key;
+
+fs.writeFile("/app/firebase-admin-key.json", firebaseAdminKeyContents);
+
 
 process.env.GOOGLE_APPLICATION_CREDENTIALS = '/app/firebase-admin-key.json';
 
