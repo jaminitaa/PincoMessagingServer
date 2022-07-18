@@ -7,7 +7,7 @@ const { getMessaging } = require('firebase-admin/messaging');
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, query, where, onSnapshot } = require("firebase/firestore");
 
-firebaseAdminKeyContents = process.env.firebase-admin-key;
+firebaseAdminKeyContents = process.env.FIREBASE_ADMIN_KEY;
 
 fs.writeFile("/app/firebase-admin-key.json", firebaseAdminKeyContents);
 
