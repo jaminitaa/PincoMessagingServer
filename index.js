@@ -6,7 +6,7 @@ const { getMessaging } = require('firebase-admin/messaging');
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, query, where, onSnapshot } = require("firebase/firestore");
 
-process.env.GOOGLE_APPLICATION_CREDENTIALS = '/home/runner/PincoMessagingServer/langara-wmdd4885-avengers-firebase-adminsdk-i2orb-6075dc7678.json';
+process.env.GOOGLE_APPLICATION_CREDENTIALS = '/app/firebase-admin-key.json';
 
 initializeAdminApp({
     credential: applicationDefault(),
