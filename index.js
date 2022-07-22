@@ -7,12 +7,8 @@ const { getMessaging } = require('firebase-admin/messaging');
 const { initializeApp } = require('firebase/app');
 const { getFirestore, collection, query, where, onSnapshot } = require("firebase/firestore");
 
-firebaseAdminKeyContents = process.env.FIREBASE_ADMIN_KEY;
 
-fs.writeFile("/app/firebase-admin-key.json", firebaseAdminKeyContents);
-
-
-process.env.GOOGLE_APPLICATION_CREDENTIALS = '/app/firebase-admin-key.json';
+process.env.GOOGLE_APPLICATION_CREDENTIALS = '/home/runner/PincoMessagingServer-1/secret-key.json';
 
 initializeAdminApp({
     credential: applicationDefault(),

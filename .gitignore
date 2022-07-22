@@ -1,1 +1,5 @@
 .DS_Store
+.replit
+secret-key.json
+node_modules/
+replit.nix
